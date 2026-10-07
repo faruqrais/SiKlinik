@@ -1,0 +1,70 @@
+/**
+ * SiKlinik - Receipt Page Print and Screen Stylesheet
+ */
+
+/* Screen Specific Styles */
+.struk-container {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+/* Printing Media Query */
+@media print {
+    /* Hide all layout elements not related to the receipt */
+    header,
+    aside,
+    #sidebar,
+    #sidebar-overlay,
+    footer,
+    .no-print,
+    .btn-actions-container,
+    .mb-6.no-print,
+    button,
+    a {
+        display: none !important;
+    }
+
+    /* Reset global page styles for printing */
+    body,
+    html {
+        background-color: #fff !important;
+        background: #fff !important;
+        color: #000 !important;
+        font-family: 'Courier New', Courier, monospace !important;
+        font-size: 11pt !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Main container settings for print layout */
+    main,
+    .min-h-screen,
+    .flex-1 {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        display: block !important;
+    }
+
+    /* Print only receipt container styling */
+    .struk-container {
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Remove browser default header/footer metadata (like URL and date) */
+    @page {
+        size: auto;
+        margin: 10mm 15mm;
+    }
+}

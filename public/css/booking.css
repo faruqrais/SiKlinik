@@ -1,0 +1,69 @@
+/* ----------------------------------------------------
+ * SiKlinik - Booking Portal Wizard Stylesheet
+ * ---------------------------------------------------- */
+
+/* Wizard Step Indicators circle layouts */
+.step-indicator {
+    opacity: 0.55;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-indicator span:first-child {
+    background-color: #f1f5f9;
+    border: 2px solid #cbd5e1;
+    color: #64748b;
+}
+
+/* Active Step State */
+.step-indicator.active {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.step-indicator.active span:first-child {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 4px 10px -2px rgba(37, 99, 235, 0.3);
+}
+
+.step-indicator.active span:last-child {
+    color: #1e3a8a;
+    font-weight: 700;
+}
+
+/* Completed Step State */
+.step-indicator.completed {
+    opacity: 0.95;
+}
+
+.step-indicator.completed span:first-child {
+    background-color: #10b981;
+    border-color: #10b981;
+    color: #ffffff;
+}
+
+/* Selectable Doctor Cards Styles */
+.doctor-select-card {
+    border: 2px solid #e2e8f0;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.doctor-select-card:hover {
+    border-color: #93c5fd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Checked Doctor Card State */
+.doctor-select-card.selected {
+    border-color: #2563eb;
+    background-color: #eff6ff;
+    box-shadow: 0 4px 12px -2px rgba(37, 99, 235, 0.1);
+}
+
+.doctor-select-card.selected .check-badge {
+    opacity: 1;
+    transform: scale(1);
+}
